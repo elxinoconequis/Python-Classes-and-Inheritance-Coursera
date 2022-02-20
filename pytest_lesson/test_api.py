@@ -9,12 +9,13 @@ def main_url():
 
 def test_login_valid():
     url = "https://reqres.in/api/login/"
-    data = {'email': "eve.holt@reqres.in",'password':"cityslicka"}
+    data = {"email": "eve.holt@reqres.in", "password": "cityslicka"}
     response = requests.post(url, data=data)
     token = json.loads(response.text)
-    #print(sorted(token.keys()))
-    assert response.status_code==200
-    assert token['token'] == "QpwL5tke4Pnpja7X4"
-#data = {'email':'abs@xyz.com','password':'qwerty'}
-# algoe esta mal con el valor del key ´token¿ que no pasa el test
+    # print(sorted(token.keys()))
+    assert response.status_code == 200
+    assert token["token"] == "QpwL5tke4Pnpja7X4"
 
+
+# data = {'email':'abs@xyz.com','password':'qwerty'}
+# algoe esta mal con el valor del key ´token¿ que no pasa el test
